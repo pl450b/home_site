@@ -1,2 +1,4 @@
 #!/bin/bash
-sudo cp * /var/www/html
+sudo cp *.jpg /var/www/html
+sudo cp *.html /var/www/html
+
