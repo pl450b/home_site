@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virginia Tech AFROTC</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        /* Cool moving background gradient */
+        body {
+            background: linear-gradient(270deg, #1a237e, #2196f3, #1a237e);
+            background-size: 600% 600%;
+            animation: gradientBackground 12s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Centered logo and text */
+        .content {
+            text-align: center;
+        }
+
+        /* Detachment Text Animation */
+        h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            animation: textFade 3s ease-in-out infinite;
+        }
+
+        @keyframes textFade {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Optional: Animated Logo */
+        img {
+            width: 200px;
+            height: auto;
+            animation: pulse 5s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Small subtitle */
+        p {
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <!-- Add your logo here (optional) -->
+        <img src="YOUR_LOGO_URL_OR_PATH_HERE" alt="AFROTC Logo">
+        <h1>Virginia Tech AFROTC</h1>
+        <p>Detachment 875</p>
+    </div>
+
+</body>
+</html>
