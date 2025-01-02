@@ -13,7 +13,7 @@
             color: #333;
         }
         header {
-            background-color: #4c5baf;
+            background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 20px;
@@ -30,17 +30,29 @@
         .day {
             border-bottom: 1px solid #ddd;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
         .day:last-child {
             border-bottom: none;
         }
-        h2 {
-            color: #4c5baf;
+        .day h2 {
+            color: #4CAF50;
+        }
+        .day img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .day p {
+            margin: 0;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: ##4c5baf;
+            background: #4CAF50;
             color: white;
             margin-top: 20px;
         }
@@ -48,51 +60,61 @@
 </head>
 <body>
     <header>
-       <h1>Norway Trip Itinerary</h1>
+        <h1>Norway Adventure Itinerary</h1>
     </header>
     <div class="container">
         <div class="day">
             <h2>Dec 27 - Arrival in Tromsø</h2>
+            <img src="placeholder.jpg" alt="Image for Arrival in Tromsø">
             <p><strong>4:45 PM:</strong> Arrive in Tromsø; private transfer to Clarion Hotel The Edge for a 4-night stay.</p>
         </div>
         <div class="day">
             <h2>Dec 28 - Reindeer Sledding & Aurora Safari</h2>
+            <img src="placeholder.jpg" alt="Image for Reindeer Sledding & Aurora Safari">
             <p><strong>Morning (9:00 AM - 4:00 PM):</strong> Travel to Tamokdalen for reindeer sledding, Sami culture storytelling, and a hot meal in a traditional lavvu.</p>
             <p><strong>Evening (6:40 PM - Late Night):</strong> Northern Lights minibus tour, with expert guides, thermal suits, and a bonfire experience.</p>
         </div>
         <div class="day">
             <h2>Dec 29 - Snowshoe Excursion</h2>
+            <img src="placeholder.jpg" alt="Image for Snowshoe Excursion">
             <p><strong>10:00 AM - 12:30 PM:</strong> Guided snowshoeing through scenic Tromsø forest with hot drinks and local snacks.</p>
         </div>
         <div class="day">
             <h2>Dec 30 - Silent Whale Watching</h2>
+            <img src="placeholder.jpg" alt="Image for Silent Whale Watching">
             <p><strong>7:45 AM - 5:00 PM:</strong> Hybrid-electric boat tour to Tromsø fjords for humpback, fin, or orca whale sightings.</p>
         </div>
         <div class="day">
             <h2>Dec 31 - Tromsø to Honningsvåg</h2>
+            <img src="placeholder.jpg" alt="Image for Tromsø to Honningsvåg">
             <p><strong>Day:</strong> Relax at Clarion Hotel The Edge before boarding the Havila Cruise (6:15 PM departure). Celebrate New Year's Eve onboard with a scenic overnight sail.</p>
         </div>
         <div class="day">
             <h2>Jan 1 - Honningsvåg to Alta</h2>
+            <img src="placeholder.jpg" alt="Image for Honningsvåg to Alta">
             <p><strong>Morning:</strong> Private transfer to Alta (3-hour drive), known as the "City of the Northern Lights."</p>
             <p><strong>Evening:</strong> Fine dining at Trasti & Trine with a seasonal 3-course meal.</p>
         </div>
         <div class="day">
             <h2>Jan 2 - Alta Adventures & Igloo Hotel Stay</h2>
+            <img src="placeholder.jpg" alt="Image for Alta Adventures & Igloo Hotel Stay">
             <p><strong>Afternoon:</strong> Husky sledding through Arctic landscapes with experienced guides.</p>
             <p><strong>Evening:</strong> Check into Sorrisniva Igloo Hotel. Enjoy a 3-course dinner and a Northern Lights snowmobile tour.</p>
         </div>
         <div class="day">
             <h2>Jan 3 - Alta to Oslo</h2>
+            <img src="placeholder.jpg" alt="Image for Alta to Oslo">
             <p><strong>Morning:</strong> Transfer to Alta Airport for a flight to Oslo. Afternoon and evening at leisure to explore or visit Nordic Pixel Forest. Stay overnight at Clarion Hotel The Hub.</p>
         </div>
         <div class="day">
             <h2>Jan 4 - Departure</h2>
+            <img src="placeholder.jpg" alt="Image for Departure">
             <p><strong>7:00 AM:</strong> Private transfer to Oslo Airport for departure flight. End of trip.</p>
         </div>
     </div>
     <footer>
-    <p>"This is a test from Wes"</p>
+        <p>This is a test from Wes</p>
     </footer>
 </body>
 </html>
+
