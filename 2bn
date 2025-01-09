@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battalion Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #0078d4;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header a {
+            display: inline-block;
+        }
+        header img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+	}
+	section {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0078d4;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+	<a href="https://virginiatech-my.sharepoint.com/:x:/r/personal/leketa_vt_edu/Documents/CADET%20ONEDRIVE/2BN/2BN%20TRIAD/Batt%20CO/2BN%20DRAFT%20BOARD.xlsx?d=w582dcbfb6ab44ecf89a4bd1170eb6dc2&csf=1&web=1&e=OLRBYy" target="_blank">
+        	<img src="struct.png" alt="Header Image">
+	</a>
+        <h1>Battalion Links</h1>
+    </header>
+    
+    <section>
+        <h2>Batt Docs</h2>
+        <ul>
+            <li><a href="https://virginiatech-my.sharepoint.com/:x:/r/personal/leketa_vt_edu/Documents/CADET%20ONEDRIVE/2BN/2BN%20S1/ALPHA%20ROSTERS/SP25%202BN%20Spartan%20Roster.xlsx?d=w53fb79272b024d6aaeadfbf6049e3748&csf=1&web=1&e=hwTyue" target="_blank">Spartan Roster</a></li>
+            <li><a href="https://virginiatech-my.sharepoint.com/:x:/r/personal/leketa_vt_edu/Documents/CADET%20ONEDRIVE/2BN/2BN%20S7/TRAINO/S25%202BN%20Training%20Program.xlsx?d=w6ce65160610e436fbeeef1b1cfb80940&csf=1&web=1&e=oIE5hx" target="_blank">Training Plan</a></li>
+            <li><a href="https://virginiatech-my.sharepoint.com/personal/leketa_vt_edu/_layouts/15/onedrive.aspx?e=5%3A2f28fb82a64445878904023dd281844c&sharingv2=true&fromShare=true&at=9&CT=1732127738342&OR=OWA%2DNT%2DMail&CID=65aefb6d%2D9990%2Dda4e%2D856e%2Dcad2a7e1daf8&clickParams=eyJYLUFwcE5hbWUiOiJNaWNyb3NvZnQgT3V0bG9vayBXZWIgQXBwIiwiWC1BcHBWZXJzaW9uIjoiMjAyNDExMDgwMDMuMzkiLCJPUyI6IldpbmRvd3MgMTAifQ%3D%3D&cidOR=Client&id=%2Fpersonal%2Fleketa%5Fvt%5Fedu%2FDocuments%2FCADET%20ONEDRIVE%2F2BN&FolderCTID=0x0120009F604B58A24AC34FA4C73279799808D5&view=0" target="_blank">OneDrive</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>XO Specific Docs</h2>
+        <ul>
+            <li><a href="https://virginiatech-my.sharepoint.com/personal/leketa_vt_edu/_layouts/15/doc.aspx?sourcedoc={49ef77c4-4447-4294-b17b-ef96db92aebc}&action=edit" target="_blank">Wesley Staff Tracker</a></li>
+            <li><a href="https://virginiatech-my.sharepoint.com/:x:/g/personal/connordc47_vt_edu/EfcNrsS85IhGvSgAGkHmhF0B6N4othb3fLOfCXKlrM2NdQ?CID=566fa6cf-6ac4-24d3-d254-900e56077d08" target="_blank">OOD Sheet</a></li>
+            <li><a href="https://example.com/personal3.docx" target="_blank">Personal Document 3</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Section 3: Miscellaneous</h2>
+        <ul>
+            <li><a href="https://example.com/misc1.docx" target="_blank">Misc Document 1</a></li>
+            <li><a href="https://example.com/misc2.docx" target="_blank">Misc Document 2</a></li>
+            <li><a href="https://example.com/misc3.docx" target="_blank">Misc Document 3</a></li>
+        </ul>
+    </section>
+</body>
+</html>
