@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #10a30d;
         }
         header {
             background: #0078d4;
@@ -75,16 +75,13 @@
         <ul>
             <li><a href="https://virginiatech-my.sharepoint.com/personal/leketa_vt_edu/_layouts/15/doc.aspx?sourcedoc={49ef77c4-4447-4294-b17b-ef96db92aebc}&action=edit" target="_blank">Wesley Staff Tracker</a></li>
             <li><a href="https://virginiatech-my.sharepoint.com/:x:/g/personal/connordc47_vt_edu/EfcNrsS85IhGvSgAGkHmhF0B6N4othb3fLOfCXKlrM2NdQ?CID=566fa6cf-6ac4-24d3-d254-900e56077d08" target="_blank">OOD Sheet</a></li>
-            <li><a href="https://example.com/personal3.docx" target="_blank">Personal Document 3</a></li>
         </ul>
     </section>
 
     <section>
         <h2>Section 3: Miscellaneous</h2>
         <ul>
-            <li><a href="https://example.com/misc1.docx" target="_blank">Misc Document 1</a></li>
-            <li><a href="https://example.com/misc2.docx" target="_blank">Misc Document 2</a></li>
-            <li><a href="https://example.com/misc3.docx" target="_blank">Misc Document 3</a></li>
+        <li><a href="https://vtcc.vt.edu/content/dam/vtcc_vt_edu/resources/manuals/VTCC%20INST.%201872.1%20STANDARD%20REGS%2001%20May%202024.pdf#page=68" target="_blank">VTCC Regs</a></li>
         </ul>
     </section>
 </body>
