@@ -3,10 +3,18 @@ const path = require('path');
 
 const app = express();
 const hostname = '0.0.0.0';
-const port = 8080;
+const port = 80;
 
 // Middleware to serve static files (HTML, CSS, JS, etc.) from the "public" directory
 app.use(express.static('public'));
+
+app.get('/det875.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'det875.html'));
+});
+
+app.get('/2bn', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', '2bn.html'));
+});
 
 // Route to serve the "home.html" file
 app.get('/about', (req, res) => {

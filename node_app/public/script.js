@@ -171,7 +171,7 @@ document.addEventListener("keydown", (event) => {
     if (key === "ArrowLeft") direction = "LEFT";
     if (key === "ArrowRight") direction = "RIGHT";
 
-    if(key === " ") moveSnake();
+    if(key === " " && !checkCollision()) moveSnake();
     
     if(!checkCollision()) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);

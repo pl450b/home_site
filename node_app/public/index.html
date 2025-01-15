@@ -3,21 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wesley's Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Wesley's Homemade  Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .main-content {
+            margin-top: 20px;
+        }
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .main-content h1 {
+            margin-top: 20px;
+            font-size: 3em;
+        }
+        .main-content p {
+            font-size: 1.5em;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <div class="toolbar">
-        <nav>
-            <ul class="nav-tabs">
-                <li><a href="./" class="active">Home</a></li>
-                <li><a href="./about">About</a></li>
-                <li><a href="./game">Game</a></li>
-                <li><a href="./contact">Contact</a></li>
+    <!-- Toolbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Wesley Flynn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wesleyflynn.com/game">Wesley's Worm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://wesleyflynn.com/contact">Contact</a>
+                </li>
             </ul>
-        </nav>
-    </div>
-    <h1>This is the home page!</h1>
-  </body>
-</html>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <div class="container main-content">
+        <img src="pics/profile.jpg" alt="Profile Picture" class="img-fluid">
+        <h1>Wesley Flynn</h1>
+        <p>What a wonderful world!</p>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="pics/fav_frog.jpg" class="card-img-top" alt="Frog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">First Frog</h5>
+                        <p class="card-text">This is my favorite frog, the Red Eye Tree Frog</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="pics/dart_frog.jpg" class="card-img-top" alt="Frog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Second Frog</h5>
+                        <p class="card-text">Ooooo careful, this is a Poison Dart Frog!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="pics/bull_frog.jpg" class="card-img-top" alt="Frog Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Third Frog</h5>
+                        <p class="card-text">And here's a classic Bull Frog</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
