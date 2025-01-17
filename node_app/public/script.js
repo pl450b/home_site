@@ -10,6 +10,25 @@ const boxSize = 10; // Size of each grid square
 let snake = [{x:400,y:400}, {x:400,y:400}, {x:400,y:400}, {x:400,y:400}]; // Snake starts at the center
 let direction = "DOWN";
 
+const ws = new WebSocket("ws://wesleyflynn.com:8080/");
+
+ws.addEventListener("message", ({ data }) => {
+    console.log(data);
+
+    if (data === "w") direction = "UP";
+    if (data === "a") direction = "DOWN";
+    if (data === "s") direction = "LEFT";
+    if (data === "d") direction = "RIGHT";
+
+    if(data === "0" && !checkCollision()) moveSnake();
+    
+    if(!checkCollision()) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawSnake();
+    }
+});
+
+drawSnake();
 // Draw the snake
 function drawSnake() {
     snake.forEach((segment, index) => {
@@ -144,8 +163,7 @@ function moveSnake() {
             head.x += boxSize;
             break;
     }
-
-    // Check if food is eaten
+     
     snake.pop();
     snake.unshift(head);
 }
@@ -162,7 +180,7 @@ function checkCollision() {
     return false;
 }
 
-// Control the snake
+/* Control the snake
 document.addEventListener("keydown", (event) => {
     const key = event.key;
 
@@ -180,4 +198,4 @@ document.addEventListener("keydown", (event) => {
 });
 
 drawSnake();
-
+*/ 
