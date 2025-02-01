@@ -10,7 +10,7 @@ const boxSize = 10; // Size of each grid square
 let snake = [{x:400,y:400}, {x:400,y:400}, {x:400,y:400}, {x:400,y:400}]; // Snake starts at the center
 let direction = "DOWN";
 
-const ws = new WebSocket("ws://wesleyflynn.com:8080/");
+const ws = new WebSocket("ws://localhost:8080/");
 
 ws.addEventListener("message", ({ data }) => {
     console.log(data);
