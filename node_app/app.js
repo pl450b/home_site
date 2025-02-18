@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const hostname = '0.0.0.0';
-const port = 80;
+const port = 3000;
 
 // Middleware to serve static files (HTML, CSS, JS, etc.) from the "public" directory
 app.use(express.static('public'));
