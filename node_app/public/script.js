@@ -10,23 +10,46 @@ const boxSize = 10; // Size of each grid square
 let snake = [{x:400,y:400}, {x:400,y:400}, {x:400,y:400}, {x:400,y:400}]; // Snake starts at the center
 let direction = "DOWN";
 
-const ws = new WebSocket("ws://localhost:8080/");
+const socket = new WebSocket('ws://0.0.0.0:8080');
 
-ws.addEventListener("message", ({ data }) => {
-    console.log(data);
+socket.addEventListener('open', event => {
+    console.log('Connected to WebSocket server');
+    socket.send('Hello from client!');
+});
 
-    if (data === "w") direction = "UP";
-    if (data === "a") direction = "DOWN";
-    if (data === "s") direction = "LEFT";
-    if (data === "d") direction = "RIGHT";
+socket.addEventListener('message', event => {
+    console.log('Message from server:', event.data);
 
-    if(data === "0" && !checkCollision()) moveSnake();
+    if (event.data === "w") direction = "UP";
+    if (event.data === "a") direction = "DOWN";
+    if (event.data === "s") direction = "LEFT";
+    if (event.data === "d") direction = "RIGHT";
+
+    if(event.data === "0" && !checkCollision()) moveSnake();
     
     if(!checkCollision()) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawSnake();
     }
 });
+
+socket.addEventListener('close', event => {
+    console.log('Disconnected from WebSocket server');
+});
+
+socket.addEventListener('error', event => {
+    console.error('WebSocket error:', event);
+});
+
+// Function to send a message to the server
+function sendMessage(message) {
+    if (socket.readyState === WebSocket.OPEN) {
+        socket.send(message);
+    } else {
+        console.error('WebSocket is not open.');
+    }
+}
+
 
 drawSnake();
 // Draw the snake
