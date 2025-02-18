@@ -10,7 +10,7 @@ const boxSize = 10; // Size of each grid square
 let snake = [{x:400,y:400}, {x:400,y:400}, {x:400,y:400}, {x:400,y:400}]; // Snake starts at the center
 let direction = "DOWN";
 
-const socket = new WebSocket('ws://0.0.0.0:8080');
+const socket = new WebSocket('ws://172.31.104.7:8080'); //IP and port on server
 
 socket.addEventListener('open', event => {
     console.log('Connected to WebSocket server');
@@ -21,8 +21,8 @@ socket.addEventListener('message', event => {
     console.log('Message from server:', event.data);
 
     if (event.data === "w") direction = "UP";
-    if (event.data === "a") direction = "DOWN";
-    if (event.data === "s") direction = "LEFT";
+    if (event.data === "a") direction = "LEFT";
+    if (event.data === "s") direction = "DOWN";
     if (event.data === "d") direction = "RIGHT";
 
     if(event.data === "0" && !checkCollision()) moveSnake();

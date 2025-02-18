@@ -4,6 +4,9 @@ import websockets
 # Set of connected clients
 connected_clients = set()
 
+# queue
+cmdQueue = []
+
 # Function to handle each client connection
 async def handler(websocket):
     # Add new client
@@ -23,15 +26,20 @@ async def handler(websocket):
 
 # Function to periodically send messages to all connected clients
 async def broadcast_messages():
-    counter = 0
     while True:
-        if connected_clients:  # Only send if clients are connected
-            message = f"Server message {counter}"
+        if connected_clients:  # Only send if clients are connected_clients
+            while not cmdQueue:
+                await asyncio.sleep(0.1)
+            message = cmdQueue.pop()
             await asyncio.gather(*(client.send(message) for client in connected_clients))
-            print(f"Broadcasted: {message}")
-            counter += 1
 
-        await asyncio.sleep(5)  # Broadcast every 5 seconds
+        await asyncio.sleep(0.1)  # Broadcast every 5 seconds
+
+# Function to grap user input and send to queue for broadcasting
+async def poll_user():
+    while(1):
+        user_input = await asyncio.to_thread(input, "Enter command: ")
+        cmdQueue.append(user_input)
 
 # Main server function
 async def main():
@@ -40,6 +48,9 @@ async def main():
 
         # Start broadcasting task
         broadcast_task = asyncio.create_task(broadcast_messages())
+        
+        # Start poll task
+        poll_task = asyncio.create_task(poll_user())
 
         # Keep the server running indefinitely
         await asyncio.get_running_loop().create_future()
