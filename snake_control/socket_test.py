@@ -41,6 +41,33 @@ async def poll_user():
         user_input = await asyncio.to_thread(input, "Enter command: ")
         cmdQueue.append(user_input)
 
+# Goofy function for auto moving
+async def auto_move():
+    while(1):
+        cmdQueue.append('w')
+        await asyncio.sleep(0.5)
+        for i in range(10):
+            cmdQueue.append('0');
+            await asyncio.sleep(0.5)
+
+        cmdQueue.append('a')
+        await asyncio.sleep(0.5)
+        for i in range(10):
+            cmdQueue.append('0');
+            await asyncio.sleep(0.5)
+        
+        cmdQueue.append('s')
+        await asyncio.sleep(0.5)
+        for i in range(10):
+            cmdQueue.append('0');
+            await asyncio.sleep(0.5)
+        
+        cmdQueue.append('d')
+        await asyncio.sleep(0.5)
+        for i in range(10):
+            cmdQueue.append('0');
+            await asyncio.sleep(0.5)
+        
 # Main server function
 async def main():
     async with websockets.serve(handler, "", 8080):  # Start WebSocket server
@@ -50,8 +77,8 @@ async def main():
         broadcast_task = asyncio.create_task(broadcast_messages())
         
         # Start poll task
-        poll_task = asyncio.create_task(poll_user())
-
+        # poll_task = asyncio.create_task(poll_user())
+        auto_task = asyncio.create_task(auto_move())
         # Keep the server running indefinitely
         await asyncio.get_running_loop().create_future()
 
