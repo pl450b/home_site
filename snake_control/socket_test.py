@@ -1,5 +1,6 @@
 import asyncio
 import websockets
+import random
 
 # Set of connected clients
 connected_clients = set()
@@ -46,25 +47,25 @@ async def auto_move():
     while(1):
         cmdQueue.append('w')
         await asyncio.sleep(0.5)
-        for i in range(10):
+        for i in range(random.randint(1,30)):
             cmdQueue.append('0');
             await asyncio.sleep(0.5)
 
         cmdQueue.append('a')
         await asyncio.sleep(0.5)
-        for i in range(10):
+        for i in range(random.randint(1,30)):
             cmdQueue.append('0');
             await asyncio.sleep(0.5)
         
         cmdQueue.append('s')
         await asyncio.sleep(0.5)
-        for i in range(10):
+        for i in range(random.randint(1,30)):
             cmdQueue.append('0');
             await asyncio.sleep(0.5)
         
         cmdQueue.append('d')
         await asyncio.sleep(0.5)
-        for i in range(10):
+        for i in range(random.randint(1,30)):
             cmdQueue.append('0');
             await asyncio.sleep(0.5)
         
